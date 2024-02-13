@@ -1,11 +1,10 @@
 #BlackJack
 import random
-ask = input("Welcome to Blackjack! Would you like to get started? \n")
+
 carddict = {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7, 8:8, 9:9, 10:10, 'J':10, 'Q':10, 'K':10, 'A':11}
 def card_creation():
     card = random.choice(list(carddict))
     return card
-
 
 
 def gameplay():
@@ -127,5 +126,9 @@ def gameplay():
             print("Not an option!")
         
 
-gameplay()
+
+ask = input("Welcome to Blackjack! Would you like to get started? \n")
+if (ask.lower() == "yes"):
+    gameplay()
+    
 
